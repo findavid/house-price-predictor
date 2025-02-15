@@ -27,18 +27,18 @@ Christian II's Allé
 Now run `scrape_latest_sales_prices` with the `*.txt` file, a postal code and optionally a property type (house, terrace_house, villa_apartment, and summerhouse). 
 
 ```shell
-> python -m scrape_latest_sales_prices examples/[FILENAME].txt [POSTAL CODE] *[PROPERTY_TYPE]*
+python -m scrape_latest_sales_prices examples/[FILENAME].txt [POSTAL CODE] *[PROPERTY_TYPE]*
 ```
 
 For example: 
 ```shell
-> python -m scrape_latest_sales_prices examples/eberts_villaby.txt 2300 --property-type 'villa_apartment'
+python -m scrape_latest_sales_prices examples/eberts_villaby.txt 2300 --property-type 'villa_apartment'
 ```
 
 This will generate a `*.csv`-file with the results of the scraping. You can now use that csv-file to calculate a suggested price based on the house's area: 
 
 ```shell
-> python -m predict_sales_price eberts_villaby.csv 180
+python -m predict_sales_price eberts_villaby.csv 180
 ```
 
 ### Narrow search
@@ -63,7 +63,7 @@ It is possible to alter certain criterias in `predict_sales_price`, as it takes 
 
 For example: 
 ```shell
-> python -m predict_sales_price eberts_villaby.csv 180 --min-sales-year=2010 --max-sales-year=2023 --min-area=100 --max-area=150 --min-samples=10
+python -m predict_sales_price eberts_villaby.csv 180 --min-sales-year=2010 --max-sales-year=2023 --min-area=100 --max-area=150 --min-samples=10
 ```
 
 ## File Descriptions
